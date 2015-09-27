@@ -224,6 +224,6 @@ AngularApp.controller('userController',
             };
             /* end misc */
 
-            //get user list during page loading
+            //get user list during page load
             $scope.getUsersList();
         }]);
