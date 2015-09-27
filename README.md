@@ -13,4 +13,4 @@ For the implementation of this project the following technologies have been used
 
 * Grunt
 
-Demo - http://crudapp-m1tr14.rhcloud.com/
+Demo - <a href="http://crudapp-m1tr14.rhcloud.com/" target="_blank">Click</a>
