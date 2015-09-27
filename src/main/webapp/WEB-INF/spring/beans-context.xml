@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- User validator -->
+    <!--<bean id="userValidator" class="com.springapp.mvc.model.validator.UserValidator" />-->
+
+    <!-- DAO -->
+    <bean id="userDAO" class="com.springapp.mvc.dao.impl.UserDAOHibernateImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Service -->
+    <bean id="userService" class="com.springapp.mvc.service.impl.UserServiceImpl">
+        <property name="userDAO" ref="userDAO"/>
+    </bean>
+</beans>
