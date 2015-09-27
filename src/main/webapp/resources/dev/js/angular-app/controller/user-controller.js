@@ -178,7 +178,7 @@ AngularApp.controller('userController',
             //actions for modal window
             var ACTIONS = {DELETE_ALL: 'deleteAll', DELETE_BY_ID: 'deleteById'};
 
-            //return modal html template with given options
+            //return modal options for html template
             var setModalOptions = function (action) {
                 var deleteAllOpt = {bodyText: 'Delete all users?'};
                 var deleteByIdOpt = {bodyText: 'Delete this user?'};
@@ -224,6 +224,6 @@ AngularApp.controller('userController',
             };
             /* end misc */
 
-            //get user list during loading page
+            //get user list during page loading
             $scope.getUsersList();
         }]);

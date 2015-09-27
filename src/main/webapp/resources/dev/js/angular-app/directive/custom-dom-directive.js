@@ -11,7 +11,7 @@ AngularApp.directive("customDomDirective", function () {
 var JqueryCustom = {};
 
 JqueryCustom.misc = function () {
-    /* Fade in effect after loading page */
+    /* Fade in effect on page load */
     $(".container-fluid").fadeIn(200);
 };
 

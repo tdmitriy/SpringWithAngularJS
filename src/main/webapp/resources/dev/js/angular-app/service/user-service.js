@@ -1,7 +1,7 @@
 AngularApp.service('userService', ['$http', '$q', 'errorService', function ($http, $q, errorService) {
     var errors = errorService;
     var result = null;
-    //URLS
+    //URL'S
     var urlFetch = "users/service/getList.json";
     var urlUserSave = "users/service/save";
     var urlUserSearch = "users/service/search/";
