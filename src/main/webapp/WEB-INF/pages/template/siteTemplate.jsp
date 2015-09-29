@@ -1,5 +1,5 @@
 <%@include file="/WEB-INF/pages/template/includes/tags/tags.jsp" %>
-<%-- dev mode (set mode to 'false' and then project will be used min.js and min.css) --%>
+<%-- dev mode (set mode to 'false' and then project will be use min.js and min.css) --%>
 <c:set var="devMode" value="false"/>
 <%-- end dev mode --%>
 
