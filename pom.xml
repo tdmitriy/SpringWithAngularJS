@@ -10,10 +10,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <!-- jdk -->
         <jdk.version>1.7</jdk.version>
 
-        <!-- spring -->
         <spring.version>4.2.0.RELEASE</spring.version>
 
         <!-- spring json -->
@@ -24,61 +22,49 @@
         <hibernate.version>5.0.0.Final</hibernate.version>
         <hibernate.annotation.version>3.5.6-Final</hibernate.annotation.version>
         <javassist.version>3.12.1.GA</javassist.version>
-       <!-- <hibernate.search.version>5.4.0.Final</hibernate.search.version>-->
 
         <!-- mysql -->
         <mysql-connector-j.version>5.1.30</mysql-connector-j.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
 
-        <!-- jstl -->
         <jstl.version>1.2</jstl.version>
 
-        <!-- junit -->
         <junit.version>4.11</junit.version>
 
-        <!-- slf4j -->
         <org.slf4j.version>1.7.12</org.slf4j.version>
         <jcl-over-slf4j.version>1.7.12</jcl-over-slf4j.version>
 
-        <!-- servlet -->
         <servlet.version>3.1.0</servlet.version>
 
-        <!-- Validation -->
         <hibernate-validator.version>5.1.3.Final</hibernate-validator.version>
         <javax-validation.version>1.1.0.Final</javax-validation.version>
 
-        <!-- Maven plugin -->
         <maven-compiler.version>3.2</maven-compiler.version>
     </properties>
 
     <dependencies>
-        <!-- Logging slf4j -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>${org.slf4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${jcl-over-slf4j.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>${org.slf4j.version}</version>
         </dependency>
 
-        <!-- Servlet api -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${servlet.version}</version>
         </dependency>
 
-        <!-- Spring Core -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -91,28 +77,24 @@
             </exclusions>
         </dependency>
 
-        <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
-        <!-- Spring MVC -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
-        <!-- Spring ORM -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
         </dependency>
 
-        <!-- Spring json -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
@@ -124,14 +106,13 @@
             <version>${jackson-databind.version}</version>
         </dependency>
 
-        <!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
             <version>${hibernate.version}</version>
         </dependency>
 
-        <!-- To enable Hibernate to use its proxy model -->
+        <!-- Enable Hibernate to use its proxy model -->
         <dependency>
             <groupId>javassist</groupId>
             <artifactId>javassist</artifactId>
@@ -144,13 +125,6 @@
             <version>${hibernate.version}</version>
         </dependency>
 
-       <!-- <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search</artifactId>
-            <version>${hibernate.search.version}</version>
-        </dependency>-->
-
-        <!-- MySQL -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -163,14 +137,12 @@
             <version>${commons-dbcp.version}</version>
         </dependency>
 
-        <!-- Jstl -->
         <dependency>
             <groupId>jstl</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
         </dependency>
 
-        <!-- Validation -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -183,7 +155,6 @@
             <version>${hibernate-validator.version}</version>
         </dependency>
 
-        <!-- Unit test -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -194,11 +165,9 @@
     </dependencies>
 
     <build>
-        <!-- Final war name -->
         <finalName>spring-angular</finalName>
 
         <plugins>
-            <!-- Set JDK Compiler Level -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -212,13 +181,7 @@
     </build>
 	<profiles>
         <profile>
-            <!-- When built in OpenShift the 'openshift' profile will be
-                used when invoking mvn. -->
-            <!-- Use this profile for any OpenShift specific customization
-                your app will need. -->
-            <!-- By default that is to put the resulting archive into the
-                'deployments' folder. -->
-            <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
+            <!-- Openshift properties -->
             <id>openshift</id>
             <build>
                 <plugins>

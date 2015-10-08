@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class UserViewController {
-    private static final Logger log = LoggerFactory.getLogger(UserViewController.class);
+    //private static final Logger log = LoggerFactory.getLogger(UserViewController.class);
 
     private static final String PAGE_USERS_SHOW = "view/usersView";
     private static final String PAGE_USERS_MANAGEMENT = "view/usersManagementView";

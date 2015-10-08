@@ -8,4 +8,4 @@
 <spring:url value="#/" var="indexURL"/>
 <spring:url value="#/users/show" var="usersShowURL"/>
 <spring:url value="#/users/management" var="usersManagementURL"/>
-<spring:url value="https://github.com/tdmitriy/spring-angularjs" var="githubUrl"/>
+<spring:url value="https://github.com/tdmitriy/SpringWithAngularJS" var="githubUrl"/>
