@@ -19,7 +19,6 @@ public class UserServiceImpl implements IUserService {
 
     private IUserDAO userDAO;
 
-    @Autowired
     public void setUserDAO(IUserDAO userDAO) {
         this.userDAO = userDAO;
     }

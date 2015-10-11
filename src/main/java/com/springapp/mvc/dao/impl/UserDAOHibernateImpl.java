@@ -17,7 +17,6 @@ import java.util.List;
 public class UserDAOHibernateImpl implements IUserDAO {
     private SessionFactory sessionFactory;
 
-    @Autowired
     public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
